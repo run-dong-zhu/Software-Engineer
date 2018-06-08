@@ -1,4 +1,4 @@
-# Leet code 455
+# leetcode 455
 
 class Solution {
 public:
