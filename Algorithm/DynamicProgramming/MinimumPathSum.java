@@ -25,8 +25,8 @@ public class MinimumPathSum {
 	public static void main(String[] args) {
 		// leetcode: 64, level: Medium
 		int[][] grid = {{1, 3, 1},
-					          {1, 5, 1},
-					          {4, 2, 1}};
+				{1, 5, 1},
+		                {4, 2, 1}};
 		
 		MinimumPathSum mps = new MinimumPathSum();
 		System.out.println(mps.solution(grid));
