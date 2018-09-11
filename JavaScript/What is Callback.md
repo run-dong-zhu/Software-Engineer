@@ -1,6 +1,4 @@
 # What is callback function?
-_**Quick guideline**_:
-* function(res, req)
 
 #### What is function(res, req, next)
   It is an anonymous function that have access to the request object, response object and the next function in the application request-response lifecycle. The **next function** is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.Middleware functions can perform the following tasks:
