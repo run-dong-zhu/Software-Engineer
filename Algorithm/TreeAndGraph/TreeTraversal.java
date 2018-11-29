@@ -21,13 +21,13 @@ class Node {
 public class TreeTraversal {
 	
     public void preOrder(Node node) {
-    	    System.out.print(node.data + " ");
-    	    if(node.left != null) {
-    		    preOrder(node.left);
-    		}
-    	    if(node.right != null) {
-    		    preOrder(node.right);
-    	    }
+	    System.out.print(node.data + " ");
+	    if(node.left != null) {
+		    preOrder(node.left);
+		}
+	    if(node.right != null) {
+		    preOrder(node.right);
+	    }
     }
     
     public void inOrder(Node node) {
@@ -52,7 +52,7 @@ public class TreeTraversal {
 
 	public static void main(String[] args) {
 		// Create a binary tree
-		Node g = new Node("g", null, null);
+	    Node g = new Node("g", null, null);
       	Node f = new Node("f", null, null);
       	Node e = new Node("e", null, null);
       	Node d = new Node("d", null, f);
