@@ -51,24 +51,24 @@ public class TreeTraversal {
     }
 
 	public static void main(String[] args) {
-		// Create a binary tree
-	    Node g = new Node("g", null, null);
-      	Node f = new Node("f", null, null);
-      	Node e = new Node("e", null, null);
-      	Node d = new Node("d", null, f);
-      	Node c = new Node("c", null, g);
-      	Node b = new Node("b", d, e);
-      	Node a = new Node("a", b, c);
-      	
-      	TreeTraversal tt = new TreeTraversal();
-      	System.out.print("Pre-order: ");
-      	tt.preOrder(a);
-      	System.out.println();
-      	System.out.print("In-order: ");
-      	tt.inOrder(a);
-      	System.out.println();
-      	System.out.print("Post-order: ");
-      	tt.postOrder(a);
+	// Create a binary tree
+	Node g = new Node("g", null, null);
+	Node f = new Node("f", null, null);
+	Node e = new Node("e", null, null);
+	Node d = new Node("d", null, f);
+	Node c = new Node("c", null, g);
+	Node b = new Node("b", d, e);
+	Node a = new Node("a", b, c);
+
+	TreeTraversal tt = new TreeTraversal();
+	System.out.print("Pre-order: ");
+	tt.preOrder(a);
+	System.out.println();
+	System.out.print("In-order: ");
+	tt.inOrder(a);
+	System.out.println();
+	System.out.print("Post-order: ");
+	tt.postOrder(a);
 	}
 
 }
