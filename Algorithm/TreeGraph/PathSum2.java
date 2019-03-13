@@ -1,4 +1,4 @@
-package TreeAndGraph;
+package treegraph;
 
 import java.util.LinkedList;
 import java.util.List;
