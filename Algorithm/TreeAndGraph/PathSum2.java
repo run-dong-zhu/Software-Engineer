@@ -34,75 +34,76 @@ class TreeNode {
 
 public class PathSum2 {
 
-	public static boolean isLeaf(TreeNode node) {
-		if(node.left != null || node.right != null) {
-			return false;
-		}
-		else {
-			return true;
-		}
+    public static boolean isLeaf(TreeNode node) {
+	if(node.left != null || node.right != null) {
+	    return false;
 	}
-	
-	public static void traversal(TreeNode node, int pathValue, int sum, List<Integer> path, List<List<Integer>> result) {
-		if(node == null) {
-			return;
-		}
-		
-		pathValue += node.val;
-		path.add(node.val);
-		
-		if(isLeaf(node) && pathValue == sum) {
-			result.add(new LinkedList<Integer>(path));
-			path.remove(path.size() - 1);
-			return;
-		}
-		traversal(node.left, pathValue, sum, path, result);
-		traversal(node.right, pathValue, sum, path, result);
-		
-		pathValue -= node.val;
-		path.remove(path.size() - 1);
+	else {
+	    return true;
 	}
+    }
 	
-	public static List<List<Integer>> solution(TreeNode root, int sum) {
-		List<List<Integer>> result = new LinkedList<List<Integer>>();
-		List<Integer> path = new LinkedList<Integer>();
-		int pathValue = 0;
-		
-		traversal(root, pathValue, sum, path, result);
-		
-		return result;
+    public static void traversal(TreeNode node, int pathValue, int sum, List<Integer> path, List<List<Integer>> result) {
+	if(node == null) {
+	    return;
 	}
+
+	pathValue += node.val;
+	path.add(node.val);
+
+	if(isLeaf(node) && pathValue == sum) {
+	    result.add(new LinkedList<Integer>(path));
+	    path.remove(path.size() - 1);
+	    return;
+	}
+
+	traversal(node.left, pathValue, sum, path, result);
+	traversal(node.right, pathValue, sum, path, result);
+		
+	pathValue -= node.val;
+	path.remove(path.size() - 1);
+    }
 	
-	public static void main(String[] args) {
-		// Create BTree
-		TreeNode a = new TreeNode(5);
-		TreeNode b = new TreeNode(4);
-		TreeNode c = new TreeNode(8);
-		TreeNode d = new TreeNode(11);
-		TreeNode e = new TreeNode(13);
-		TreeNode f = new TreeNode(4);
-		TreeNode g = new TreeNode(7);
-		TreeNode h = new TreeNode(2);
-		TreeNode i = new TreeNode(5);
-		TreeNode j = new TreeNode(1);
+    public static List<List<Integer>> solution(TreeNode root, int sum) {
+	List<List<Integer>> result = new LinkedList<List<Integer>>();
+	List<Integer> path = new LinkedList<Integer>();
+	int pathValue = 0;
+
+	traversal(root, pathValue, sum, path, result);
 		
-		a.left = b;
-		a.right = c;
-		b.left = d;
-		c.left = e;
-		c.right = f;
-		d.left = g;
-		d.right = h;
-		f.left = i;
-		f.right = j;
+	return result;
+    }
+	
+    public static void main(String[] args) {
+	// Create BTree
+	TreeNode a = new TreeNode(5);
+	TreeNode b = new TreeNode(4);
+	TreeNode c = new TreeNode(8);
+	TreeNode d = new TreeNode(11);
+	TreeNode e = new TreeNode(13);
+	TreeNode f = new TreeNode(4);
+	TreeNode g = new TreeNode(7);
+	TreeNode h = new TreeNode(2);
+	TreeNode i = new TreeNode(5);
+	TreeNode j = new TreeNode(1);
 		
-		List<List<Integer>> pathSum = solution(a, 22);
-		for(int x = 0; x < pathSum.size(); x++) {
-			for(int y = 0; y < pathSum.get(x).size(); y++) {
-				System.out.print(pathSum.get(x).get(y) + " ");
-			}
-			System.out.println();
+	a.left = b;
+	a.right = c;
+	b.left = d;
+	c.left = e;
+	c.right = f;
+	d.left = g;
+	d.right = h;
+	f.left = i;
+	f.right = j;
+		
+	List<List<Integer>> pathSum = solution(a, 22);
+	    for(int x = 0; x < pathSum.size(); x++) {
+		for(int y = 0; y < pathSum.get(x).size(); y++) {
+		    System.out.print(pathSum.get(x).get(y) + " ");
 		}
+		    System.out.println();
+	    }
 	}
 
 }
