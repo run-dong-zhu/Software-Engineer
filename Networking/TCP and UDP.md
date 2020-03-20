@@ -44,3 +44,22 @@ TCP segment structure (resource: [WiKi](https://en.wikipedia.org/wiki/Transmissi
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+
+TCP
+UDP
+Reliability
+connection-oriented protocol
+connectionless protocol
+Ordered
+Yes
+No
+Weight
+Heavy
+Light
+Streaming
+Data read as stream, one end one start
+Datagrams Packets are sent individually
+Example
+TCP 80, SMTP 25, FTP 21
+DNS 53, VoIP
