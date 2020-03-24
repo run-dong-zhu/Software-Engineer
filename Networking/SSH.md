@@ -7,6 +7,7 @@
 The standard TCP port for SSH is 22
 
 ## How SSH Works ##
+
 SSH protocol uses symmetric encryption, asymmetric encryption and hashing in order to secure transmission of information. The SSH connection between the client and the server happens in three stages:
 
 1. Verification of the server by the client.
@@ -41,7 +42,7 @@ After symmetric encryption has been established, the authentication of the clien
 7. The server uses the same shared session key and the original number that it sent to the client to calculate the MD5 value on its own. It compares its own calculation to the one that the client sent back. If these two values match, it proves that the client was in possession of the private key and the client is authenticated.
 Asymmetry of the keys allows authentication of the client because client can only decrypt the messages if it has the correct associated private key.
 
-## SSH v.s. SSL ##
+## SSH VS. SSL ##
 
 Well first there are two different protocols in play here– an SSL works over an http which stands for hyper text transfer protocol which is transferring (retrieving and sending) data from your computer to a server. An SSL creates a security layer through this transfer.
 
