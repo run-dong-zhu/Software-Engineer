@@ -53,3 +53,5 @@ An SSH creates a layer of protection as data is being sent from one network to a
 - [Courey Wong](https://medium.com/nyc-design/what-is-ssh-and-do-i-need-it-4129d963690f)
 
 - [Mudit Maheshwari](https://medium.com/@Magical_Mudit/understanding-ssh-workflow-66a0e8d4bf65)
+
+- [Robin Francis](https://medium.com/@mailrobinfrancis/ssh-for-noobs-1825234258a2)
