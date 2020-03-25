@@ -48,8 +48,8 @@ Well first there are two different protocols in play here– an SSL works over a
 
 An SSH creates a layer of protection as data is being sent from one network to a remote computer. So in other words the connection to transfer data through the network protocol is from one local computer to another, because your trying to access information from another computer remotely.
 
-
 ## reference ##
+
 - [Courey Wong](https://medium.com/nyc-design/what-is-ssh-and-do-i-need-it-4129d963690f)
 
 - [Mudit Maheshwari](https://medium.com/@Magical_Mudit/understanding-ssh-workflow-66a0e8d4bf65)
