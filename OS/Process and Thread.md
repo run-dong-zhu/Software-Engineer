@@ -29,9 +29,29 @@ When a process is created, the parent is given a special token (called a handle)
 2. Ready (runnable; temporarily stopped to let another process run).
 3. Blocked (unable to run until some external event happens).
 
-![process states](https://www.google.com/url?sa=i&url=https%3A%2F%2Fcodescracker.com%2Foperating-system%2Fprocess-states.htm&psig=AOvVaw0tBV0ftxODzITjemR5-Tbj&ust=1585201861508000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDx7ab3tOgCFQAAAAAdAAAAABAD)
+![process states](https://www.researchgate.net/profile/Mohsen_Sharifi/publication/268347340/figure/fig6/AS:295440944779286@1447450018770/Three-state-transition-diagram.png)
+
+### Process Interrupt ###
+
+To implement the process model, the operating system maintains a table (an array of structures), called the **process table**, with one entry per process.
+
+Associated with each I/O class is a location (typically at a fixed location near the bottom of memory) called the **interrupt vector**. It contains the address of the interrupt service procedure. Suppose that user process 3 is running when a disk interrupt happens. User process 3’s program counter, program status word, and sometimes one or more registers are pushed onto the (current) stack by the interrupt hardware. The computer then jumps to the address specified in the interrupt vector. That is all the hardware does. From here on, it is up to the software, in particular, the interrupt service procedure.
+
+**All** interrupts start by saving the registers, often in the process table entry for the current process. Then the information pushed onto the stack by the interrupt is removed and the stack pointer is set to point to a temporary stack used by the process handler.
+
+Skeleton of what the lowest level of the operating system does when an interrupt occurs:
+
+1. Hardware stacks program counter, etc.
+2. Hardware loads new program counter from interrupt vector.
+3. Assembly-language procedure saves registers.
+4. Assembly-language procedure sets up new stack.
+5. C interrupt service runs (typically reads and buffers input).
+6. Scheduler decides which process is to run next.
+7. C procedure returns to the assembly code.
+8. Assembly-language procedure starts up new current process.
 
 ### Process Priority ###
+
 https://www.nixtutor.com/linux/changing-priority-on-linux-processes/
 
 [Youtube Link](https://youtu.be/P8GrPOpD8Sk)
