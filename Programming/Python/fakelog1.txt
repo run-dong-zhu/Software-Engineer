@@ -1,0 +1,14 @@
+Jan 20 03:25:08 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:25:08 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:25:09 fakehost run-parts(/etc/cron.daily)[20447]: finished logrotate
+Jan 20 03:26:02 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:26:08 fakehost logrotate: ALERT exited abnormally with [2]
+Jan 20 03:26:09 fakehost logrotate: ALERT exited abnormally with [3]
+Jan 20 03:26:18 fakehost logrotate: ALERT exited abnormally with [4]
+Jan 20 03:26:38 fakehost logrotate: ALERT exited abnormally with [5]
+Jan 20 03:26:48 fakehost logrotate: ALERT exited abnormally with [6]
+Jan 20 03:27:01 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:27:28 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:28:28 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:28:28 fakehost logrotate: ALERT exited abnormally with [1]
+Jan 20 03:28:09 fakehost run-parts(/etc/cron.daily)[20447]: finished logrotate
