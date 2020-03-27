@@ -52,6 +52,9 @@ Skeleton of what the lowest level of the operating system does when an interrupt
 
 ### Process Priority ###
 
+
+## Thread ##
+
 https://www.nixtutor.com/linux/changing-priority-on-linux-processes/
 
 [Youtube Link](https://youtu.be/P8GrPOpD8Sk)
