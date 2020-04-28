@@ -33,3 +33,13 @@ public class DemoApplication {
    }
 }
 ```
+
+### Dependency Injection ###
+
+In Spring Boot, we can use Spring Framework to define our beans and their dependency injection. The **@ComponentScan** annotation is used to find beans and the corresponding injected with **@Autowired** annotation.
+
+If you followed the Spring Boot typical layout, no need to specify any arguments for **@ComponentScan annotation**. All component class files are automatically registered with Spring Beans.
+
+### Logging ###
+
+Spring Boot uses Apache Commons logging for all internal logging. Spring Boot’s default configurations provides a support for the use of Java Util Logging, Log4j2, and Logback. Using these, we can configure the console logging as well as file logging.
