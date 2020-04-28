@@ -83,3 +83,51 @@ public class DemoApplication {
 }
 ```
 
+### REST ###
+
+Rest Controller
+
+The **@RestController** annotation is used to define the RESTful web services. It serves JSON, XML and custom response.
+
+```java
+@RestController
+public class ProductServiceController {
+}
+```
+
+Request Mapping
+The **@RequestMapping** annotation is used to define the Request URI to access the REST Endpoints. We can define Request method to consume and produce object. The default request method is GET.
+
+```java
+@RequestMapping(value = "/products")
+public ResponseEntity<Object> getProducts() {
+}
+```
+
+Request Body
+
+The **@RequestBody** annotation is used to define the request body content type.
+
+```java
+public ResponseEntity<Object> createProduct(@RequestBody Product product) {
+}
+```
+
+Path Variable
+
+The **@PathVariable** annotation is used to define the custom or dynamic request URI. The Path variable in request URI is defined as curly braces {}
+
+```java
+public ResponseEntity<Object> updateProduct(@PathVariable("id") String id) {
+}
+```
+
+Request Parameter
+
+The **@RequestParam** annotation is used to read the request parameters from the Request URL. By default, it is a required parameter. We can also set default value for request parameters.
+
+```java
+public ResponseEntity<Object> getProduct(
+   @RequestParam(value = "name", required = false, defaultValue = "honey") String name) {
+}
+```
