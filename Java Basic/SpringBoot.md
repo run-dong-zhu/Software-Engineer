@@ -43,3 +43,43 @@ If you followed the Spring Boot typical layout, no need to specify any arguments
 ### Logging ###
 
 Spring Boot uses Apache Commons logging for all internal logging. Spring Boot’s default configurations provides a support for the use of Java Util Logging, Log4j2, and Logback. Using these, we can configure the console logging as well as file logging.
+
+Log Format
+
+- Date and Time that gives the date and time of the log
+- Log level shows INFO, ERROR or WARN
+- Process ID
+- The --- which is a separator
+- Thread name is enclosed within the square brackets []
+- Logger Name that shows the Source class name
+- The Log message
+
+By default, all logs will print on the console window and not in the files. If you want to print the logs in a file, you need to set the property logging.file or logging.path in the application.properties file.
+
+```yaml
+logging.path = /var/tmp/
+logging.file = /var/tmp/mylog.log
+```
+
+The code given below shows how to add the slf4j logger in Spring Boot main class file.
+```java
+package com.tutorialspoint.demo;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+   private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
+   
+   public static void main(String[] args) {
+      logger.info("this is a info message");
+      logger.warn("this is a warn message");
+      logger.error("this is a error message");
+      SpringApplication.run(DemoApplication.class, args);
+   }
+}
+```
+
