@@ -74,6 +74,20 @@ The Web layer consists of the Web, Web-MVC, Web-Socket, and Web-Portlet modules
 
   4. The **Web-Portlet** module provides the MVC implementation to be used in a portlet environment and mirrors the functionality of Web-Servlet module.
 
+#### Java Bean ####
+
+Spring container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. The Spring container uses DI to manage the components that make up an application. These objects are called Spring Beans, which we will discuss in the next chapter.
+
+A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
+
+Scope
+
+1. singleton: This scopes the bean definition to a single instance per Spring IoC container (default).
+2. prototype
+3. request
+4. session
+5. global-session
+
 ## Getting Start ##
 
 ### AutoConfiguration ###
